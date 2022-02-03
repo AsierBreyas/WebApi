@@ -9,8 +9,8 @@ using Tiempo.Models;
 namespace Tiempo.Migrations
 {
     [DbContext(typeof(TiempoContext))]
-    [Migration("20220129170328_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20220203094626_Actualizacion")]
+    partial class Actualizacion
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,19 +43,10 @@ namespace Tiempo.Migrations
                     b.Property<string>("PathImg")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PrecipitacionAcumulada")
+                    b.Property<string>("Precipitacion")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Region")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TempMax")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TempMedia")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TempMin")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Temperatura")

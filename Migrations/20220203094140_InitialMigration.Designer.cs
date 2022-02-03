@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tiempo.Models;
 
 namespace Tiempo.Migrations
 {
     [DbContext(typeof(TiempoContext))]
-    partial class TiempoContextModelSnapshot : ModelSnapshot
+    [Migration("20220203094140_InitialMigration")]
+    partial class InitialMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,7 +43,7 @@ namespace Tiempo.Migrations
                     b.Property<string>("PathImg")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Precipitacion")
+                    b.Property<string>("PrecipitacionAcumulada")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Region")

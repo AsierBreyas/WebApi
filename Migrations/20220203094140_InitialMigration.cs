@@ -2,7 +2,7 @@
 
 namespace Tiempo.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class InitialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,9 +14,6 @@ namespace Tiempo.Migrations
                     Region = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Fecha = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Temperatura = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TempMin = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TempMax = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TempMedia = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     VelocidadViento = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PrecipitacionAcumulada = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true),
